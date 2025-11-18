@@ -4,6 +4,7 @@ import com.cfs.backend.Repo.TIcketRepo;
 import com.cfs.backend.entity.Ticket;
 import lombok.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Getter
@@ -12,9 +13,12 @@ import org.springframework.stereotype.Service;
 public class TIcketService {
 
     private final TIcketRepo repo;
+
     // Create ticket
 
+    @Transactional
     public Ticket CreateTicket(Ticket ticket){
+        ticket.setId(null);
         return repo.save(ticket);
     }
 

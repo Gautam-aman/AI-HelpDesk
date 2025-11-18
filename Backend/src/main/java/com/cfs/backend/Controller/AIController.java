@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,8 +17,8 @@ public class AIController {
     private final AIService aiService;
 
     @PostMapping
-    public ResponseEntity<String>  getResponse(@RequestBody String query){
-        return ResponseEntity.ok(aiService.getResponse(query));
+    public ResponseEntity<String>  getResponse(@RequestBody String query , @RequestHeader("ConversationId")  String ConvoId){
+        return ResponseEntity.ok(aiService.getResponse(query , ConvoId));
     }
 
 }

@@ -20,7 +20,14 @@ public class DbTool {
 
     @Tool(description = "This tool helps to create new ticket in database")
     public Ticket createTicket(@ToolParam(description = "Ticket details to create new ticket") Ticket ticket) {
-        return tIcketService.CreateTicket(ticket);
+       try{
+           System.out.println("Creating a new ticket");
+           return tIcketService.CreateTicket(ticket);
+       }
+       catch(Exception e){
+           System.out.println(e.getMessage());
+           return null;
+       }
     }
 
     // get ticket using username;
