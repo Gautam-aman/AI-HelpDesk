@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface TIcketRepo extends JpaRepository<Ticket, Long> {
-    //Optional<Ticket> findByTicketId(Long ticketId);
+    Optional<Ticket> findById(Long ticketId);
    Optional<Ticket> findByUsername(String name);
 }
