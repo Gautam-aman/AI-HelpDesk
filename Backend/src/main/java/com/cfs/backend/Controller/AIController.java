@@ -14,6 +14,7 @@ import reactor.core.publisher.Mono;
 @Getter
 @Setter
 @RequestMapping("api/v1/helpdesk")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AIController {
 
     private final AIService aiService;
