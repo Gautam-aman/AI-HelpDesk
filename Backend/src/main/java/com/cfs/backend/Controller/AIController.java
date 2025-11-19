@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 @Getter
 @Setter
-@RequestMapping("api/v1/ai")
+@RequestMapping("api/v1/helpdesk")
 public class AIController {
 
     private final AIService aiService;
@@ -23,7 +23,7 @@ public class AIController {
         return ResponseEntity.ok(aiService.getResponse(query , ConvoId));
     }
 
-    @PostMapping
+    @PostMapping("/stream")
     public Flux<String> streamResponse(@RequestBody String query , @RequestHeader("ConversationId")  String ConvoId){
         return this.aiService.streamResponse(query,ConvoId);
     }
