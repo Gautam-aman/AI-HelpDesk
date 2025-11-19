@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,6 +21,11 @@ public class AIController {
     @PostMapping
     public ResponseEntity<String>  getResponse(@RequestBody String query , @RequestHeader("ConversationId")  String ConvoId){
         return ResponseEntity.ok(aiService.getResponse(query , ConvoId));
+    }
+
+    @PostMapping
+    public Flux<String> streamResponse(@RequestBody String query , @RequestHeader("ConversationId")  String ConvoId){
+        return this.aiService.streamResponse(query,ConvoId);
     }
 
 }

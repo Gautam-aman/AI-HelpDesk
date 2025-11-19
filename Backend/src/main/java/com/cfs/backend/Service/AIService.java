@@ -10,6 +10,10 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
@@ -34,6 +38,18 @@ public class AIService {
                 .user(query).
                 call().
                 content();
+    }
+
+    public Flux<String> streamResponse(String query , String ConvoId){
+        return this.chatClient.
+                prompt()
+                .advisors(advisorSpec -> advisorSpec.param(ChatMemory.CONVERSATION_ID, ConvoId))
+                .tools(dbTool , emailTool)
+                .system(String.valueOf(systemPrompt))
+                .user(query)
+                .stream()
+                .content();
+
     }
 
 }
