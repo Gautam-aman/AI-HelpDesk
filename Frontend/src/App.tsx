@@ -14,7 +14,7 @@ export default function App() {
       <header className="p-4 bg-slate-800 border-b border-slate-700 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-3xl font-semibold text-white tracking-wide">
-            CFS Helpdesk
+            Aman's Helpdesk
           </h1>
           <div className="text-sm text-gray-300">
             Conversation: <span className="font-mono">{convoId}</span>
@@ -40,7 +40,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="p-4 text-center text-sm text-gray-500">
-        Built with ❤️ — CFS Helpdesk Frontend
+        Built with ❤️ —Aman Helpdesk Frontend
       </footer>
     </div>
   );
