@@ -1,6 +1,6 @@
 🧠 AI-HelpDesk
 
-A full-stack AI-powered helpdesk system built using Spring Boot + React + RAG-based AI responses.
+A full-stack AI-powered helpdesk system built using Spring Boot + React +  AI responses.
 Automatically answer queries, manage tickets, store conversation history, and integrate AI seamlessly into enterprise workflows.
 
 ---
@@ -9,7 +9,6 @@ Automatically answer queries, manage tickets, store conversation history, and in
 
 ### ✅ AI-Powered Helpdesk
 - Natural language query handling  
-- RAG (Retrieval-Augmented Generation) support  
 - Context-aware responses  
 - Multi-turn conversations  
 
@@ -167,7 +166,8 @@ VECTOR_DB_URL=your_vector_store
 - Multi-agent AI routing  
 - Organization-based workspaces  
 - Advanced ticket workflow automation  
-- OCR-based document intake  
+- OCR-based document intake
+- - RAG (Retrieval-Augmented Generation) support  
 
 ---
 
