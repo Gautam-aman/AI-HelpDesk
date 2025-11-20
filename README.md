@@ -3,6 +3,9 @@
 A full-stack AI-powered helpdesk system built using Spring Boot + React +  AI responses.
 Automatically answer queries, manage tickets, store conversation history, and integrate AI seamlessly into enterprise workflows.
 
+<img width="1226" height="878" alt="Screenshot 2025-11-20 at 9 20 25 PM" src="https://github.com/user-attachments/assets/7d04ea53-3eed-47ba-8ae0-10c383afbe21" />
+
+
 ---
 
 ## 🚀 Features
