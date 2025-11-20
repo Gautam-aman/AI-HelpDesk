@@ -24,17 +24,10 @@ Automatically answer queries, manage tickets, store conversation history, and in
 - AI uses documents for accurate responses  
 
 ### 👤 User System
-- JWT Authentication  
-- Role-based access (User, Agent, Admin)  
 - Cross-origin support for frontend  
   ```java
   @CrossOrigin(origins = "http://localhost:5173")
   ```  
-
-### 📊 Admin Dashboard
-- Ticket analytics  
-- Query logs  
-- User activity tracking  
 
 ---
 
@@ -42,17 +35,15 @@ Automatically answer queries, manage tickets, store conversation history, and in
 
 ### Backend – Spring Boot
 - Spring Web  
-- Spring Data JPA  
-- Spring Security + JWT  
-- PostgreSQL / MySQL  
-- Vector store (PGVector / ChromaDB)  
-- OpenAI / Llama models for AI  
+- Spring Data JPA    
+   MySQL  
+- Vector store (MariaDB)  
+- OpenAI for AI  
 
 ### Frontend – React + Vite
 - Tailwind CSS  
-- Redux Toolkit (if used)  
 - Axios  
-- ShadCN components (optional)  
+- ShadCN components 
 
 ---
 
@@ -168,26 +159,6 @@ VECTOR_DB_URL=your_vector_store
 2. Store in vector DB  
 3. Retrieve similar documents  
 4. Generate smart AI answer  
-
----
-
-## 📡 API Endpoints (Short Overview)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/auth/login | Login user |
-| POST | /api/tickets | Create ticket |
-| GET | /api/tickets/{id} | Get ticket |
-| POST | /api/query/ask | Ask AI question |
-| POST | /api/docs/upload | Upload knowledge document |
-
----
-
-## 📸 Screenshots (To be added later)
-- Dashboard  
-- Live chat UI  
-- Ticket view  
-- Document upload  
 
 ---
 
